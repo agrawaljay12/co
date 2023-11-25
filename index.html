@@ -1,58 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-        <title>login page </title>
-        <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-         <link rel="stylesheet" href="mycss.css">
-         <script>
-            function validation()
-            {
-                var name=document.form.username.value;
-                var password=document.form.password.value;
-                if(name==null||name=="")
-                {
-                    alert("please fill name");
-                    return false;
-                }
-                else if(password.length<6)
-                {
-                    alert(" password must be 6 character");
-                    return false;
-                }
-            }
-        </script>
-</head>
-<body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="mycss.css">
+  </head>
+  <body>
     <div class="center">
-    <div class="login">
-        <h1 align="center"> ACCOUNT LOGIN </h1>   
+      <h1>Login</h1>
+      <form method="post">
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div class="pass">Forgot Password?</div>
+        <input type="submit" value="Login">
+        <div class="signup_link">
+         <a href="#">Signup</a>
+        </div>
+      </form>
     </div>
-    <div class="username">
-        <form method ="post" onsubmit="return validation()" name="form">
-            <table align="center">
-           <div> <tr>
-               <th> <label> <h2> USERNAME </h2> </label></th>
-             </tr>
-             <tr>  
-                <th><input  type="text" placeholder="Enter username" name="username"><th>
-              </tr>
-              </div>
-              <div class="password">
-              <tr>    
-                <th><label> <h2> PASSWORD </h2></label></th>
-               </tr>
-               <tr> 
-                    <th><input type="password" placeholder="Enter password" name="password"><br><br></th>
-               </tr>
-               </div>
-                <tr id="bgcolor">     
-                    <th><input type="submit" value="Login"></th>
-                </tr>
-          </table>  
-    </form>
-    </div>
-    </div>
-</body>
+
+  </body>
 </html>
