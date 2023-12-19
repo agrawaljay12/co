@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!--<link rel="stylesheet" href="styles.css">-->
-    <title>Registration Page</title>
+    <title>LOGIN page</title>
     <style>
         body {
 			background: url(https://images.unsplash.com/photo-1686491969573-fc4db1f350e7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat;
@@ -75,45 +75,31 @@
     <form id="registrationForm">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required placeholder="Enter username">
-	
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required placeholder="Enter Email">
 
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required placeholder="Enter password">
 
-        <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Enter confirm Password">
-
-        <div class="error" id="error-message"></div>
-
-        <button type="button" onclick="validateForm()">Register</button>
-		<div class="group">
-			<br></br>
-			<span><a href="#">Forget-password</a></span>
-			<br></br>
-			<span><A href="login.html">Login</A></span>
+        <button type="button" onclick="log()">login</button>
+		<div class="group"><br>
+      <span ><a href="#">Forget-password</a></span>
+      <br>
+      <br>
+			<span><A href="regis.html">Register</A></span>
 		</div>
     </form>
 
     <script>
-        function validateForm() {
-            var username = document.getElementById('username').value;
-            var email = document.getElementById('email').value;
-            var password = document.getElementById('password').value;
-            var confirmPassword = document.getElementById('confirmPassword').value;
-            var errorMessage = document.getElementById('error-message');
-
-            if (password !== confirmPassword) {
-                errorMessage.textContent = "Passwords do not match.";
-            } else {
-                errorMessage.textContent = ""; 
-                alert("Registration successful!\nUsername: " + username + "\nEmail: " + email);
-                window.location.href="login.html";
-            }
+        function log(){
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        if(username == "j" && password == "j"){
+            window.location.href="homepage.html",true;
+          }
+          else {
+            alert("Wrong Username or Password");
+          }
+          return false;
         }
     </script>
-
 </body>
 </html>
